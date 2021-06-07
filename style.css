@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap');
+
+:root {
+  --color_black: #333;
+  --color_blue: #529fff;
+  --color_orange: #ffaf3f;
+  --color_orange_hover: #ff8539;
+}
+
+/* font-family: 'M PLUS Rounded 1c', sans-serif; */
+
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c',
+    sans-serif;
+}
+
+body {
+  line-height: 1.8;
+  line-height: 2;
+  font-size: 18px;
+  color: var(--color_black);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+
+/* ここまで リセット*/
+*/
+
+/* 「icon」ではじまるclass名をもつアイコンすべてに適用 */
+.material-icons {
+  fill: #fff;
+  display: block;
+  font-weight: 500;
+  margin: 16px;
+  padding: 16px;
+}
+
+
+/* 見出し */
+
+h1 {
+  position: relative;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+h1:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  display: inline-block;
+  width: 10%;
+  height: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color_orange);
+  border-radius: 2px;
+}
+
+
+
+/* フォーム */
+input,
+select,
+textarea,
+button {
+  font-size: 100%;
+  font-family: inherit;
+
+}
+
+.palent_contact_form {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 24px;
+}
+
+.label {
+  font-weight: 500;
+}
+
+#mail_icon,
+#palent_contact_title {
+  font-size: 36px;
+}
+
+/* プレースホルダーの色 */
+::placeholder {
+  color: gray;
+}
+
+
+
+/* テキストエリア */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  /* 幅 */
+  font-size: 0.95em;
+  /* フォントサイズ */
+  margin: 1em 0;
+  /* 前後の余白 */
+  padding: 0.5em;
+  /* テキスト周りの余白 */
+  border: solid 2px #e3e6ea;
+  /* 線の色 */
+  border-radius: 4px;
+  /* 角丸 */
+  color: gray;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+
+
+}
+
+/* フォーカス時のスタイル */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--color_orange);
+  /* 線の色 */
+  outline: 0;
+}
+
+/* ラジオボタン */
+/* inputは非表示にする */
+.my-radio {
+  position: relative;
+  display: block;
+  /* 縦並びに */
+  margin: 8px 0px;
+  /* 前後のスペース */
+  padding-left: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* inputは非表示にする */
+.my-radio input {
+  display: none;
+}
+
+
+
+
+/* 常に表示する枠線の円 */
+.radio-mark {
+  position: absolute;
+  top: 8px;
+  /* 上からの位置 */
+  left: 0;
+  height: 22px;
+  /* 大きさ */
+  width: 22px;
+  /* 大きさ */
+  border: solid 2px #d4dae2;
+  /* 線 */
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/* 選択時に重ねる円 */
+.radio-mark:after {
+  content: "";
+  position: absolute;
+  background: var(--color_orange);
+  /* 色 */
+  border-radius: 50%;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  opacity: 0;
+  /* 透明にしておく */
+}
+
+/* 選択時に重ねた円の透明を解除 */
+.my-radio input:checked+.radio-mark:after {
+  opacity: 1;
+}
+
+#source1,
+#source2,
+#source3 {
+  margin-left: 8px;
+}
+
+#btnarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+/* ボタン */
+
+
+#send {
+  /* ブラウザ特有のスタイルを無効に */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  border: 2px solid var(--color_orange_hover);
+  background: #fff;
+  color: var(--color_orange_hover);
+  font-weight: bold;
+  padding: 0.5em 2em 0.5em 1em;
+  line-height: 1.4;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 4px;
+}
+
+#send::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  margin-top: -6px;
+  transform: rotate(45deg);
+  border-top: 2px solid var(--color_orange_hover);
+  border-right: 2px solid var(--color_orange_hover);
+  transition: right 0.3s;
+}
+
+#send:hover {
+  background: var(--color_orange_hover);
+  color: #fff;
+}
+
+#send:hover::after {
+  border-color: #fff;
+  right: 7px;
+}
+
+#send:active,
+#send:focus {
+  opacity: 0.8;
+}
+
+
+
+.memo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 48px;
+}
+
+a {
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color_orange_hover);
+}
+
+/* note.php */
+.title {
+  margin: 48px;
+}
+
+.memoarea {
+  margin: 64px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__cover {
+  height: 150px;
+  width: 100%;
+}
+
+.card__content {
+  /* Take available height */
+  flex: 1;
+}
+
+/* カード */
+.card_parent {
+  margin: 2em 0;
+  width: 360px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+}
+
+.cardurl {
+  font-size: 1.3em;
+  background: var(--color_orange);
+  padding: 16px;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+}
+
+.cardgood {
+  padding: 15px 20px;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#arara,
+#teian {
+  width: 360px;
+}
+
+#save_btn {
+  display: inline-block;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  background: var(--color_orange);
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #da966f;
+  border-radius: 3px;
+  margin: 36px;
+  letter-spacing: 0.2em;
+}
+
+#save_btn:hover {
+
+  background: var(--color_orange_hover);
+}
+
+#save_btn:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+}
+
+/* テキストエリア */
+.note_text {
+  color: var(--color_black);
+  width: 360px;
+}
+
+
+/* 編集画面 */
+
+.btnarea {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnarea p {
+  margin: 16px;
+
+}
+
+.edit_good input,
+.edit_bad {
+  color: var(--color_black);
+}
+
+
+/* 目次 */
+.index_top{
+  margin:64px;
+}
+.content_text{
+  margin: 8px;
+}
+
+.content_wrapper {
+  display: block;
+  position: relative;
+  margin: 24px uto;
+  padding: 10px 0;
+  width: 300px;
+  background: #f1f1f1;
+  box-sizing: border-box;
+}
+
+.content {
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  margin: 0;
+  padding: 10px 0 7px;
+  z-index: 2;
+  width: 40px;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  background: #fa8383;
+  border-radius: 2px 0 0 0;
+}
+
+.content:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: -5px;
+  border: none;
+  border-bottom: solid 6px #d07676;
+  border-right: solid 5px transparent;
+}
+
+.content:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 0;
+  width: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 10px solid #fa8383;
+}
