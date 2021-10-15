@@ -1,17 +1,8 @@
-/* font-family: kiro,
-sans-serif;
-font-weight: 700;
-font-style: italic; */
 
 :root {
-  /* Set neon color */
-
-
   --neon-text-color: #f40;
   --neon-border-color: #08f;
   --neon-ice-color: rgb(0, 13, 255);
-
-
   --color_black: #333;
   --color_blue: #529fff;
   --color_orange: #ffaf3f;
