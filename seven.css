@@ -140,14 +140,14 @@ button {
 /* ここまで リセット*/
 
 
-.parent {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.sotowaku {
+.outerline {
   display: flex;
   width: 800px;
   border-top: solid 8px #333;
@@ -160,13 +160,6 @@ button {
   display: flex;
   background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #bcbcbc 75%, #9d9d9d 100%);
   z-index: 10;
-}
-
-.left_outer,
-.right_outer {
-
-  /* background-image:linear-gradient(to top, lightgrey 0%, #f0f0f0 5%, #e0e0e0 12%, #efefef 32%, #bcbcbc 48%, #9d9d9d 75%, #7f7f7f 100%); */
-
 }
 
 .left_inner,
@@ -222,14 +215,12 @@ button {
 
 .tepura2 {
   margin-top: 16px;
-
   width: 360px;
 }
 
 .tepura3 {
   margin-top: 16px;
   width: 320px;
-
 }
 
 .tepura4 {
@@ -259,7 +250,6 @@ h2 {
     sans-serif;
   font-weight: 700;
   color: #FFF;
-  /* width: 400px; */
   position: relative;
   display: inline-block;
   padding: 0 85px;
@@ -299,17 +289,15 @@ h2::after {
   flex-direction: column;
 }
 
-
-
 /* ボタン */
 
-.btns {
+.button_container {
   width: 80px;
   display: inline-block;
   text-align: center;
 }
 
-.wash_btn {
+.button {
   font-family: kiro,
     sans-serif;
   font-weight: 700;
@@ -317,39 +305,26 @@ h2::after {
   font-size: 24px;
   color: #FFF;
   text-decoration: none;
-  /* 下線を消す */
   background: #333;
-  /*背景色*/
   width: 80px;
-  /*幅*/
   height: 80px;
-  /*高さ*/
   border-radius: 50%;
-  /*丸くする*/
   box-sizing: border-box;
   text-align: center;
-  /*文字を中央に*/
   border: solid 5px #FFF;
   box-shadow: 4px 4px 9px 0px rgba(255, 255, 255, 0.45) inset, -4px -4px 9px 0px rgba(0, 0, 0, 0.06) inset;
-  /*ボタンに立体感を出す*/
   cursor: pointer;
-  /*カーソル当てたときの動き*/
   transition: .3s;
-  /*押したときの動きを滑らかに*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.wash_btn:active {
-  /*ボタンを押したとき*/
+.button:active {
   box-shadow: 3px 3px 6px 0px rgba(157, 157, 157, 0.07) inset, -2px -2px 3px 0px rgba(255, 255, 255, 0.52) inset;
-  /*影を変化させる*/
 }
 
-
-
-.btn_text {
+.button_text {
   color: #FFF;
   margin: 0.5em 0;
   font-size: 8px;
@@ -470,7 +445,7 @@ h2::after {
   }
 }
 
-.saigo {
+.bottom {
   margin: 64px;
 }
 
